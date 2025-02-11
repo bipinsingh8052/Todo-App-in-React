@@ -1,3 +1,4 @@
+import Child from "./Child"
 
 
 function App() {
@@ -16,7 +17,15 @@ function App() {
         </div>
       </div>
       <div className="display">
+        <Child/>
 
+      </div>
+      <div className="counter">
+        <h1></h1>
+        <div className="btn">
+          <button>Increment</button>
+          <button >Decrement</button>
+        </div>
       </div>
     </div>
      
