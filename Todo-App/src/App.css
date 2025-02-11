@@ -84,6 +84,7 @@
 .task {
   border: 1px solid transparent;
 
+  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +98,7 @@
 .task .button {
   font-size: 20px;
   color: red;
+  display: flex;gap: 20px;
 }
 .task .button:hover{
   cursor: pointer;

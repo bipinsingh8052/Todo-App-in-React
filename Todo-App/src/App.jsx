@@ -2,22 +2,28 @@ import Child from "./Child"
 import './App.css'
 import { GiNotebook } from "react-icons/gi";
 
-import { useCallback, useState } from "react"
+import { useCallback, useEffect, useMemo, useState } from "react"
 
 function App() {
   let[counter,setcounter]=useState(0);
   let [task,settask]=useState([]);
-
   let[input,setinput]=useState("")
-  
-  let alltask=useCallback(taskmaker,[task])
+  let [index,setindex]=useState(0);
 
-
-  const taskmaker=()=>{}
 
   const senddata=()=>{
     settask(values=>([...values,input]))
   }
+  let memo =useMemo(()=>{
+    settask(task.filter((_, i) => i !== index));
+  },[index])
+
+
+  console.log(index,'indexno: deleted')
+
+
+  let alltask=useCallback(senddata,[task])
+  useEffect(()=>{ console.log(memo)},[task])
   return (
     <>
     <div className="container">
@@ -32,7 +38,7 @@ function App() {
         </div>
       </div>
       <div className="display">
-        <Child  setfunction={alltask}  settask={task} />
+        <Child  task={task}  alltask={alltask}  setindex={setindex}/>
 
       </div>
       <div className="counter">

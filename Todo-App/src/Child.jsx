@@ -1,23 +1,26 @@
 import React, { memo } from 'react'
 import { MdOutlineContentCut } from "react-icons/md";
  import './App.css'
- function Child({settask,setfunction}) {
+ import { IoIosCopy } from "react-icons/io";
+ function Child({task,alltask ,setindex}) {
+    console.log("normal")
   return (
     <>
     {
-        settask.map((e,index)=>{
-            return(
-                <div className="task" key={index}>
-        <div className="option">
-            
-            <p>{e}</p>
-        </div>
-        <div className="button">
-        <MdOutlineContentCut />
-        </div>
+      task.length===0?" ":(  task.map((e,index)=>{
+        return(
+            <div className="task" key={index}>
+    <div className="option">
+        
+        <p>{e}</p>
     </div>
-            )
-        })
+    <div className="button">
+    <  MdOutlineContentCut onClick={()=>{setindex(index)}}  />
+    <IoIosCopy onClick={alltask} />
+    </div>
+</div>
+        )
+    }))
     }
       
     </>
