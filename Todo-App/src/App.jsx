@@ -19,7 +19,7 @@ function App() {
   },[index])
 
 
-  console.log(index,'indexno: deleted')
+  // console.log(index,'indexno: deleted')
 
 
   let alltask=useCallback(senddata,[task])
