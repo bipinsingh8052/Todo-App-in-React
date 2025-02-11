@@ -1,0 +1,109 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container{
+  height: 100vh;width: 100%;
+  background-color: whitesmoke;display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;gap: 40px;
+}
+.container .input h1{
+  font-size: 35px;
+  font-family: cursive;
+
+}
+.container .input h1 span{
+  color: rgb(167, 167, 15);
+}
+.container .input .main_input{
+  width: auto;
+  border: 1px solid transparent;
+  background-color: rgb(221, 199, 199);
+  border-radius: 20px;overflow: hidden;
+  display: flex;
+  /* justify-content: space-around; */
+}
+.container .input .main_input input{
+  outline: none;
+  border: none;
+  font-size: 20px;
+  padding-left: 20px;
+  color:green;
+  background-color: rgb(221, 199, 199);
+}
+.container .input .main_input button{
+  font-size: 18px;
+  padding: 10px;border: none;
+  outline: none;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  background-color: orangered;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: whitesmoke;
+}
+.container .input .main_input button:hover{
+  color: rgb(210, 185, 185);
+}
+
+
+
+.container .counter{
+  display: flex;
+  flex-direction: column;justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .counter h1 {
+  font-size: 28px;
+}
+.container .counter .btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.container .counter .btn button {
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid transparent;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+}
+.container .counter .btn button:hover{
+  color: rgb(238, 223, 223);
+}
+
+
+.task {
+  border: 1px solid transparent;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  /* gap:80px; */
+  width: 300px;
+  padding: 10px;
+  background-color: rgb(12, 220, 26);
+  border-radius: 20px;
+}
+.task .button {
+  font-size: 20px;
+  color: red;
+}
+.task .button:hover{
+  cursor: pointer;
+  color: rgb(186, 18, 18);
+}
+.task .option p{
+ font-size: 20px;
+}
+
+

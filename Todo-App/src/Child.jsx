@@ -1,19 +1,26 @@
-import React from 'react'
+import React, { memo } from 'react'
 import { MdOutlineContentCut } from "react-icons/md";
-
-export default function Child() {
+ import './App.css'
+ function Child({settask,setfunction}) {
   return (
     <>
-    <div className="task">
+    {
+        settask.map((e,index)=>{
+            return(
+                <div className="task" key={index}>
         <div className="option">
-            <input type="checkbox"  />
-            <p>Hellow brother</p>
+            
+            <p>{e}</p>
         </div>
         <div className="button">
         <MdOutlineContentCut />
         </div>
     </div>
+            )
+        })
+    }
       
     </>
   )
 }
+export default memo(Child)
